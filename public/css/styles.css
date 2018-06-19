@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #3D4044;
+  min-height: 20vh;
+}
+
+footer .far {
+  font-weight: 400 !important;
+}
+
+footer .fa, footer .fas, footer .fab {
+  font-weight: 900 !important;
+}
+
+/**  Basic Page CSS **/
+
+body {
+  background-color: #2D7CF6;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  position: relative;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+button {
+  margin-left: 5px;
+}
+
+.main {
+  background: #eeeeee;
+  padding: 30px 0;
+}
+
+.display-3 {
+  color: #eeeeee;
+}
+
+/**  Interface Styles **/
+
+.cand-addheading {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.item-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: 10px 5%;
+  font-size: 0.75rem;
+}
+
+.item-list .candidate-item {
+  border-bottom: 1px dotted gray;
+  padding-top: 20px;
+}
+
+.item-list .candidate-item:last-child {
+  border-bottom: none;
+}
+
+.item-list .candidate-name {
+  font-weight: 600;
+  color: #2D7CF6;
+  font-size: 1.3em;
+  line-height: 100%;
+}
+
+.item-list .candidate-info {
+  font-size: 1.7em;
+}
+
+.item-list .label-item {
+  font-weight: 600;
+  color: #667B82;
+}
+
+.item-list .candidate-delete {
+  font-size: 1.2em;
+}
+
+.item-list .cand-date {
+  font-style: italic;
+}
+
+.item-list .cand-notes {}
+
+.dropdown-menu li:last-child {
+  padding-bottom: none;
+  border-bottom: none;
+}
+
+#name:hover, #date:hover, #status:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#asc:hover, #desc:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.divider {
+  border-bottom: 7px solid #667B82;
+}
