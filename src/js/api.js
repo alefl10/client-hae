@@ -30,7 +30,7 @@ const filterDate = (data) => {
     });
   } else {
     if (candidateList.date_applied.indexOf('/') !== -1) return data;
-    candidateList.date_applied = dateCleanUp(candidateList);
+    candidateList.date_applied = dateCleanUp(candidateList.date_applied);
   }
   return candidateList;
 };

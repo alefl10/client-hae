@@ -136,7 +136,7 @@ class App extends Component {
     });
     this.state.submit.forEach(({ id, status }) => {
       api.updateCandidate(id, { status, reviewed: true })
-        .then(updatedCandidate => console.log(updatedCandidate)) // For testing purposes
+        .then(updatedCandidate => console.log('Update Request Response: ', updatedCandidate)) // For testing purposes
         .catch((err) => {
           errorFlag = true;
           console.log(err);
