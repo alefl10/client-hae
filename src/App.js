@@ -121,6 +121,7 @@ class App extends Component {
   updateRequest() {
     const updateCandidate = [];
     const candidateList = this.state.candidateList;
+    let errorFlag = false;
 
     this.state.candidateList.forEach((candidate, index) => {
       const tempCandidate = candidate;
@@ -134,22 +135,33 @@ class App extends Component {
       });
     });
     this.state.submit.forEach(({ id, status }) => {
-      api.updateCandidate(id, { status })
-        .then(updatedCandidate => console.log(updatedCandidate))
-        .catch(err => console.log(err));
+      api.updateCandidate(id, { status, reviewed: true })
+        .then(updatedCandidate => console.log(updatedCandidate)) // For testing purposes
+        .catch((err) => {
+          errorFlag = true;
+          console.log(err);
+        });
     });
-
-    // I should move it inside the .then but the server is giving me problems
-    this.setState({
-      candidateList,
-      orderBy: 'name',
-      orderDir: 'asc',
-      queryText: '',
-      reviewed: false,
-      updateStatus: false,
-      submit: [],
-    });
-    console.log(updateCandidate);
+    if (!errorFlag) {
+      this.setState({
+        candidateList,
+        orderBy: 'name',
+        orderDir: 'asc',
+        queryText: '',
+        reviewed: false,
+        updateStatus: false,
+        submit: [],
+      });
+    } else {
+      this.setState({
+        orderBy: 'name',
+        orderDir: 'asc',
+        queryText: '',
+        reviewed: false,
+        updateStatus: false,
+        submit: [],
+      });
+    }
   }
   render() {
     if (this.state.candidateList !== undefined) {

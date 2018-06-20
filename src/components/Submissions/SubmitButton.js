@@ -30,7 +30,7 @@ class SubmitButton extends Component {
 SubmitButton.propTypes = {
   updateRequest: PropTypes.func.isRequired,
   submit: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired || PropTypes.number.isRequired,
     status: PropTypes.string.isRequired,
   })).isRequired,
 };

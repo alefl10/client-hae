@@ -67,7 +67,7 @@ class CandidateList extends Component {
 
 CandidateList.propTypes = {
   candidate: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired || PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     years_exp: PropTypes.number.isRequired,
     status: PropTypes.string.isRequired,
@@ -79,7 +79,7 @@ CandidateList.propTypes = {
   updateStatus: PropTypes.bool.isRequired,
   onCheck: PropTypes.func.isRequired,
   submit: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired || PropTypes.number.isRequired,
     status: PropTypes.string.isRequired,
   })).isRequired,
 };

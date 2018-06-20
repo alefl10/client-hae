@@ -33,7 +33,7 @@ const SubmissionDropbox = ({ candidate, onCheck }) => (
 SubmissionDropbox.propTypes = {
   onCheck: PropTypes.func.isRequired,
   candidate: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired || PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     years_exp: PropTypes.number.isRequired,
     status: PropTypes.string.isRequired,
