@@ -40,8 +40,8 @@ export const fetchCandidateList = () =>
       console.log(err);
     });
 
-export const fetchNames = candidateId =>
-  axios.put(`${config.url}/candidates/${candidateId}`)
+export const updateCandidate = (candidateId, status) =>
+  axios.patch(`${config.url}/candidates/${candidateId}`, status)
     .then(resp => filterDate(resp.data))
     .catch((err) => {
       console.log(err);

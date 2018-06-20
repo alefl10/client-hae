@@ -37,9 +37,21 @@ button {
   margin-left: 5px;
 }
 
+li {
+  padding-bottom: 20px;
+}
+
+header a:hover {
+  color: #C69446;
+}
+
 .main {
   background: #eeeeee;
   padding: 30px 0;
+}
+
+.submit {
+  margin-top: 15px;
 }
 
 .display-3 {
@@ -47,6 +59,11 @@ button {
 }
 
 /**  Interface Styles **/
+
+.update-info {
+  color: #667B82;
+  margin-bottom: 30px;
+}
 
 .cand-addheading {
   cursor: pointer;
@@ -62,15 +79,6 @@ button {
   list-style-type: none;
   margin: 10px 5%;
   font-size: 0.75rem;
-}
-
-.item-list .candidate-item {
-  border-bottom: 1px dotted gray;
-  padding-top: 20px;
-}
-
-.item-list .candidate-item:last-child {
-  border-bottom: none;
 }
 
 .item-list .candidate-name {
@@ -97,11 +105,21 @@ button {
   font-style: italic;
 }
 
-.item-list .cand-notes {}
+.item-list .cand-description {
+  border-bottom: 1px dotted gray;
+}
 
 .dropdown-menu li:last-child {
   padding-bottom: none;
   border-bottom: none;
+}
+
+.search-candidates {
+  margin-bottom: 40px;
+}
+
+.search-candidates li {
+  padding-bottom: 2px;
 }
 
 #name:hover, #date:hover, #status:hover {
@@ -116,4 +134,5 @@ button {
 
 .divider {
   border-bottom: 7px solid #667B82;
+  margin-bottom: 2px;
 }
