@@ -8,7 +8,7 @@ const dateCleanUp = (date) => {
   const month = newDate.substring(5, 7);
   const day = newDate.substring(8, 10);
   const time = newDate.substring(10, 20);
-  newDate = `${day}/${month}/${year} ${time}`;
+  newDate = `${year}/${month}/${day} ${time}`;
   return newDate;
 };
 
@@ -23,13 +23,11 @@ const cleanUpId = (candidate) => {
 const filterDate = (data) => {
   const candidateList = data;
   if (data.length !== undefined) {
-    if (candidateList[0].date_applied.indexOf('/') !== -1) return data;
     candidateList.forEach((candidate, index) => {
       const date = dateCleanUp(candidate.date_applied);
       candidateList[index].date_applied = date;
     });
   } else {
-    if (candidateList.date_applied.indexOf('/') !== -1) return data;
     candidateList.date_applied = dateCleanUp(candidateList.date_applied);
   }
   return candidateList;
