@@ -120,7 +120,9 @@ class App extends Component {
 
   updateRequest() {
     const updateCandidate = [];
-    const candidateList = this.state.candidateList;
+    const {
+      candidateList,
+    } = this.state;
     let errorFlag = false;
 
     this.state.candidateList.forEach((candidate, index) => {
