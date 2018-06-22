@@ -1,4 +1,4 @@
-# client-hae
+# react-client-hae
 Front End React Application developed for a HAE Assessment. This Application is meant to work along the server you can find in the following link:
 <https://github.com/alefl10/server-hae>
 
